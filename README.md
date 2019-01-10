@@ -1,7 +1,7 @@
 # JavaScript Logging
 Forwards JavaScript logs to ASP.NET Core applications.
 
-JavaScript Logging is a small library which forwards client-side JavaScript logging via `console.info`, `console.error`, etc. to the server and calls logs the message with the equivalent using the `ILogger` interface.
+JavaScript Logging is a small library which forwards client-side JavaScript logging via `console.info`, `console.error`, etc. to your ASP.NE Core application and calls logs the message with the equivalent using the `ILogger` interface.
 
 ## Getting started
 
