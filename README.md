@@ -5,7 +5,7 @@ Forwards JavaScript console logs to ASP.NET Core applications.
 | --- | --- | --- |
 | [![Windows Build status](https://ci.appveyor.com/api/projects/status/rnf0a0wpsi8td146?svg=true)](https://ci.appveyor.com/project/henkmollema/logging-javascript) | [![Linux Build Status](https://travis-ci.com/webenablebv/Logging.JavaScript.svg?branch=master)](https://travis-ci.com/webenablebv/Logging.JavaScript) | [![NuGet](https://img.shields.io/nuget/vpre/Webenable.Logging.JavaScript.svg)](https://www.nuget.org/packages/Webenable.Logging.JavaScript) |
 
-JavaScript Logging is a small library which forwards client-side JavaScript logging via `console.info`, `console.error`, etc. to your ASP.NE Core application and logs the message with the equivalent log level using the `ILogger` interface. This library is inspired by the [blogpost](http://hishambinateya.com/integrate-javascript-logging-with-asp.net-core-logging-apis) and [sample application](https://github.com/hishamco/jsLogger) of Hisham and I took the liberty to create a NuGet package from his idea.
+JavaScript Logging is a small library which forwards client-side JavaScript logging via `console.info`, `console.error`, etc. to your ASP.NET Core application and logs the message with the equivalent log level using the `ILogger` interface. This library is inspired by the [blogpost](http://hishambinateya.com/integrate-javascript-logging-with-asp.net-core-logging-apis) and [sample application](https://github.com/hishamco/jsLogger) of Hisham and I took the liberty to create a NuGet package from his idea.
 
 ## Getting started
 
