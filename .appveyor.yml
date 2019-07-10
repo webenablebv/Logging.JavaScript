@@ -1,12 +1,17 @@
 version: '{build}'
 pull_requests:
   do_not_increment_build_number: true
-image: Visual Studio 2017
+image: Visual Studio 2019
 nuget:
   disable_publish_on_pr: true
 build_script:
-  - ps: .\build.ps1
+  - cmd: dotnet build
+  - cmd: dotnet test .\test\Webenable.Logging.JavaScript.Tests
+  - cmd: dotnet pack .\src\Webenable.Logging.JavaScript -c Release -o .\artifacts
 test: off
+branches:
+  only:
+    - master
 init:
   - git config --global core.autocrlf input
 environment:
