@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 namespace Webenable.Logging.JavaScript.TestWebsite
 {
@@ -18,10 +19,10 @@ namespace Webenable.Logging.JavaScript.TestWebsite
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddJavaScriptLogging();
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddRazorPages().SetCompatibilityVersion(CompatibilityVersion.Latest);
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -34,7 +35,8 @@ namespace Webenable.Logging.JavaScript.TestWebsite
 
             app.UseStaticFiles();
 
-            app.UseMvc();
+            app.UseRouting();
+            app.UseEndpoints(endpoints => endpoints.MapRazorPages());
         }
     }
 }

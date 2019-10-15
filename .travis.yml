@@ -1,7 +1,11 @@
 language: csharp
 mono: none
-dotnet: 2.1.701
+dotnet: 3.0
 dist: xenial
+env:
+  global:
+    - DOTNET_SKIP_FIRST_TIME_EXPERIENCE=true
+    - DOTNET_CLI_TELEMETRY_OPTOUT=true
 branches:
   only:
   - master
@@ -13,5 +17,5 @@ matrix:
     - os: linux
       dist: xenial
     - os: osx
-      dotnet: 2.1.701
-      osx_image: xcode10.1
+      dotnet: 3.0.100
+      osx_image: xcode11.2
