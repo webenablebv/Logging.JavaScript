@@ -1,6 +1,6 @@
 language: csharp
 mono: none
-dotnet: 3.0
+dotnet: 3.1
 dist: xenial
 env:
   global:
@@ -10,12 +10,4 @@ branches:
   only:
   - master
 script:
-    - dotnet build
     - dotnet test test/Webenable.Logging.JavaScript.Tests
-matrix:
-  include:
-    - os: linux
-      dist: xenial
-    - os: osx
-      dotnet: 3.0.100
-      osx_image: xcode11.2

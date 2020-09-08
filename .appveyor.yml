@@ -2,12 +2,8 @@ version: '{build}'
 pull_requests:
   do_not_increment_build_number: true
 image: Visual Studio 2019
-nuget:
-  disable_publish_on_pr: true
 build_script:
-  - cmd: dotnet build
   - cmd: dotnet test .\test\Webenable.Logging.JavaScript.Tests
-  - cmd: dotnet pack .\src\Webenable.Logging.JavaScript -c Release -o .\artifacts
 test: off
 branches:
   only:
@@ -17,7 +13,3 @@ init:
 environment:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
   DOTNET_CLI_TELEMETRY_OPTOUT: true
-  CI: true
-artifacts:
-- path: .\artifacts\**\*.nupkg
-  name: NuGet
